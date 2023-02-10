@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/detailstyle.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/moblie.css">
+  <link rel="shortcut icon" href="img/favicon2.png" type="image/x-icon">
+  <!-- <script src="js/jquery-3.6.1.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  
+  <!-- jq -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      //backgroundcolor interior ver.
+      $("body,html").css({'background-color':'#9dca5e'});
+      
+      //.dot site change
+      $("div#title div.wrap .subject h3 .dot").css({'top':'9rem','left':'19rem'});
+
+      //svg color 
+      $(".dot svg").css({'fill':'#f49f48'});
+      
+      //next background color
+      $("div#title div.wrap .next .back").css({'background-color':'#f49f48'});
+
+      //.dot hover
+      $(".dot").hover(function(){
+        $(this).css({'transform':'scale(1.2)'});
+      });
+      $(".dot").mouseleave(function(){
+        $(this).css({'transform':'scale(1)'});
+      });
+      
+      //.next hover
+      $("div#title div.wrap .next .click").hover(function(){
+        $(this).parent().children(".back").css({'transition':'0.3s','transform':'scale(1.2)'});
+      });
+      $("div#title div.wrap .next .click").mouseleave(function(){
+        $(this).parent().children(".back").css({'transition':'0.3s','transform':'scale(1)'});
+      });
+
+      //svg color 
+      
+    });
+  </script>
+  <title>yeah_soul</title>
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <div class="wrap">
+      <h1 class="logo">
+        <a href="index.html" class="logo">yeah_soul</a>
+      </h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="about.html">about</a></li>
+          <li><a href="index.html">project</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div id="title">
+    <div class="wrap">
+      <div class="subject">
+        <h3>
+          foodstadium 
+          <span class="block"></span>
+          for seo-mun.
+          <div class="dot">
+            <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+              <g>
+                <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                  c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                  c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                  c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                  C189.12,238.66,192.92,238.13,181.9,240.69"/>
+              </g>
+            </svg>
+          </div>
+        </h3>
+        <img src="img/public4.jpg" alt="">
+        <p>PUBLIC<span class="block"></span>DESIGN</p>
+      </div>
+      <div class="explain">
+        <p>실내환경디자인학과 졸업작품 대구 서문시장 중심으로 안전하고 새로운 먹거리 공간제안</p>
+        <div class="dot">
+          <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+          y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+            <g>
+              <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                C189.12,238.66,192.92,238.13,181.9,240.69"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="img">
+        <p></p>
+        <img src="img/project12/food.gif" alt="">
+        <div class="dot">
+          <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+          y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+            <g>
+              <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                C189.12,238.66,192.92,238.13,181.9,240.69"/>
+            </g>
+          </svg>
+        </div>
+        <div class="dot">
+          <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+          y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+            <g>
+              <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                C189.12,238.66,192.92,238.13,181.9,240.69"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <ul class="detail">
+        <li>
+          <p>projectname</p>
+          <p>          
+            foodstadium for seo-mun.
+          </p>
+        </li>
+        <li>
+          <p>Contribution</p>
+          <p>공간디자인 3D 작업 및 adobe design tool 활용 디자인 시안 작업</p>
+        </li>
+        <li>
+          <p>date</p>
+          <p>2016.12</p>
+        </li>
+        <li>
+          <p>link</p>
+          <a class="none" href="#;">-</a>
+        </li>
+      </ul>    
+      <div class="next">
+        <div class="back"></div>
+        <div class="click">
+          <a href="projectdetail13.html">NEXT</a>
+          <P>2015<span class="block"></span>대구공공디자인공모전</P>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer>
+    <h1>dreams blooms endlessly</h1>
+    <p>copyright. 2022. yeah_soul. all rights are deserved.</p>    
+  </footer>
+</body>
+</html>

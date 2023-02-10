@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/moblie.css">
+  <link rel="shortcut icon" href="img/favicon2.png" type="image/x-icon">
+  <!-- <script src="js/jquery-3.6.1.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- JQ -->
+  <script type="text/javascript">
+    $(document).ready(
+        function(){
+        //aos
+          AOS.init();
+        //email hover transition
+        $("#contact2 .wrap .con .email a").hover(function(){
+          $(this).children().css({'transform':'scale(1.2)'});
+        });
+        $("#contact2 .wrap .con .email a").mouseleave(function(){
+          $(this).children().css({'transform':'scale(1)'});
+        });
+      }
+    );
+    </script>
+  <title>yeah_soul</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+      <div class="wrap">
+        <h1 class="logo">
+          <a href="index.html" class="logo">yeah_soul</a>
+        </h1>
+        <nav>
+          <ul class="menu">
+            <li><a href="about.html">about</a></li>
+            <li><a href="index.html">project</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="contact2">
+        <div class="wrap">
+          <div class="con">
+            <div class="email">
+              <a href="mailto:beaupinetree@gmail.com?subject=같이 일하기를 희망합니다!">beaupinetree@gmail.com<img src="img/email.svg" alt=""></a>
+            </div>
+            <div class="link">
+              <ul class="sns">
+                <li>
+                  <a href="download/Lee Ye sol 2023 portfolio.pdf">portfolio</a>
+                </li>
+                <li>
+                  <a href="download/이예솔 이력서 23ver.pdf">resume</a>
+                </li>
+              </ul>
+              <a href="sms:010-3830-2247" class="number">+82 1038302247</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+</body>
+</html>
