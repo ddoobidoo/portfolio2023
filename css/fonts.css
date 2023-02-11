@@ -6,10 +6,30 @@
 @font-face {
   font-family: 'PPNeueMontreal-Thin';
   src: url('../fonts/PPNeueMontreal-Thin.woff') format('woff');
-  font-weight: thin;
+  font-weight: lighter;
 }
 @font-face {
   font-family: 'PPNeueMontreal-Bold';
   src: url('../fonts/PPNeueMontreal-Bold.woff') format('woff');
   font-weight: bold;
 }
+@font-face {
+  font-family: 'AppleSDGothicNeo';
+  src: url('../fonts/AppleSDGothicNeoM.woff') format('woff');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'AppleSDGothicNeo';
+  src: url('../fonts/AAppleSDGothicNeoSB.woff') format('woff');
+  font-weight: bold;
+}
+/* @font-face {
+  font-family: 'AppleSDGothicNeoR';
+  src: url('../fonts/AppleSDGothicNeoR.woff') format('woff');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'AppleSDGothicNeoSB';
+  src: url('../fonts/AAppleSDGothicNeoSB.woff') format('woff');
+  font-weight: normal;
+} */

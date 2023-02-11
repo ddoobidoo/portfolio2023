@@ -68,10 +68,16 @@ body{
     }
     div#title div.wrap {
       
+  font-family: 'AppleSDGothicNeo';
+  font-weight: normal;
+  text-transform: capitalize;
     }
     div#title div.wrap .subject {
     display: block;
     padding: 150px 0 100px;
+    /*! font-family: 'AppleSDGothicNeo'; */
+    /*! font-weight: normal; */
+    /*! text-transform: capitalize; */
     }
     div#title div.wrap .subject h3 {
     text-align: center;
