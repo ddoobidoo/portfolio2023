@@ -201,6 +201,13 @@
     div#title div.wrap .next .click p{
     font-size: 60px;
     }
+    div#title div.wrap .explain p{
+    font-size: 28px;
+    }
+    div#title div.wrap ul.detail li p{ 
+    font-size: 16px;
+    line-height: 1.4;
+    }
 /*   about   */
     #about .wrap .txt p{
     width: 100%;
