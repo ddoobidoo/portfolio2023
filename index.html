@@ -25,16 +25,21 @@
         //page in transition
         $("html","body").fadeIn(1000);
 
-        //page transition
-        // $("header div.wrap nav ul.menu li a").click(function(){
-        //   $("html","body").fadeIn(1000);
-        // });
-
         //menu scroll : project
         var projectp=$("#project").offset().top-200;
 
         $("header div.wrap nav ul.menu li:nth-child(2) a").click(function(){
           $("html,body").animate({scrollTop:projectp},2000);
+          return false;
+        });
+
+        //mobile menu transition
+        $("header .wrap nav ul.gnb").hide();
+        $(".momenu").click(function(){
+          $(this).children("span:nth-child(1)").toggleClass("rotate");
+          $(this).children("span:nth-child(2)").toggleClass("disappear");
+          $(this).children("span:nth-child(3)").toggleClass("rotate2");
+          $("header .wrap nav ul.gnb").slideToggle(500);
           return false;
         });
 
@@ -105,7 +110,7 @@
   <header>
     <div class="wrap">
       <h1 class="logo">
-        <a href="" class="logo">yeah_soul</a>
+        <a href="index.html" class="logo">yeah_soul</a>
       </h1>
       <nav>
         <a class="momenu">
@@ -117,6 +122,14 @@
           <li><a href="about.html">about</a></li>
           <li><a href="index.html">project</a></li>
           <li><a href="contact.html">contact</a></li>
+        </ul>
+        <ul class="gnb">
+          <li><a href="about.html">about</a></li>
+          <li><a href="index.html">project</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <h1>
+            <a href="index.html" class="logo">yeah_soul</a>
+          </h1>
         </ul>
       </nav>
     </div>

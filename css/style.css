@@ -30,15 +30,16 @@ body{
     font-size: 24px;
     }
     header div.wrap nav {
-    width: 40px;
-    height: 35px;
+    /*! width: 40px; */
+    /*! height: 35px; */
     }
-    header div.wrap nav a{
+    header div.wrap nav .momenu{
     display: none;
     }
     header div.wrap nav ul.menu {
     display: flex;
-    gap: 50px;
+    gap: 30px;
+    /*! width: 100%; */
     }
     header div.wrap nav ul.menu li {
     
@@ -47,6 +48,7 @@ body{
     text-decoration: none;
     font-size: 24px;
     transition: 0.5s;
+    padding: 10px;
     }
     header div.wrap nav ul.menu li a:hover{
     opacity: 0.3;
@@ -491,7 +493,7 @@ main{
   background-image: url(../img/favicon2.png);
   background-size: contain;
   transition: 2.5s;
-  z-index: 6;
+  z-index: 5;
   }
   aside a:hover{
   transform: rotate(360deg);

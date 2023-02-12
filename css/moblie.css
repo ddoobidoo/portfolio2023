@@ -1,5 +1,8 @@
 @media screen and (max-width:786px) {
 /*   header   */
+    header div.wrap{
+
+    }
     header div.wrap h1.logo a.logo{
     font-size: 20px;
     line-height: 1.3;
@@ -8,13 +11,40 @@
     display: block;
     width: 40px;
     height: 35px;
-    }
-    header div.wrap nav a{
+    }    
+    header div.wrap nav .momenu{
+    width: 40px;
+    height: 35px;
     display: block;
     width: 100%;
     height: 100%;
     position: relative;
+    z-index: 6;
     }
+    header div.wrap nav .momenu a span{
+
+    }
+    .rotate{
+    transform: translateX(-6px) translateY(2px) rotate(-45deg);
+    transform-origin: right top;
+    transition: 0.5s;
+    }
+    .rotate2{
+    transform: translateX(-6px) translateY(-1px) rotate(45deg);
+    transform-origin: right bottom;
+    transition: 0.5s;
+    }
+    .disappear{
+    animation: fdout linear 1 0.5s forwards;
+    }
+@keyframes fdout{
+    0%{
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 0;
+    }
+  }
     header div.wrap nav a span{
     display: inline-block;
     position: absolute;
@@ -30,8 +60,41 @@
     header div.wrap nav a span:last-child{
     bottom: 0;
     }
-    header div.wrap nav .menu{
-    display: none !important;
+    header div.wrap nav ul.menu{
+    display: none;
+    }
+    header div.wrap nav .gnb{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f05038;
+    z-index: 1;
+    height: 812px;
+    }
+    header div.wrap nav .gnb li{
+    padding: 0 30px;
+    }
+    header div.wrap nav .gnb li:nth-child(1){
+    margin-top: 100px;
+    }
+    header div.wrap nav .gnb li a{
+    text-decoration: none;
+    font-size: 40px;
+    line-height: 1.5;
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+    }
+    header div.wrap nav .gnb li a:hover{
+    color: #00000082;
+    }
+    header div.wrap nav .gnb h1 .logo{
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    text-decoration: none;
+    font-size: 20px;
     }
     /*   title   */
     div#title div.wrap div.title{
@@ -124,7 +187,8 @@
     top: 22rem;
     }
     div#title div.wrap .img img{
-    width: 400px;   
+    width: 300px;
+    min-width: 280px;   
     padding: 3rem 0 0;
     }
     .dot svg{
@@ -132,10 +196,69 @@
     height: 80px !important;
     }
     div#title div.wrap ul.detail li{
-    grid-template-columns: 2fr 5fr;
+    grid-template-columns: 3fr 5fr;
     }
     div#title div.wrap .next .click p{
     font-size: 60px;
+    }
+/*   about   */
+    #about .wrap .txt p{
+    width: 100%;
+    display: block;
+    margin: 100px 0 0 0;
+    font-size: 18px;
+    }
+    #about .wrap .img p{
+    width: 100%;
+    display: block;
+    margin: 700px 0 0 0;  
+    font-size: 15px;
+    padding: 0;
+    min-width: 100%;
+    }
+    #about .wrap .img p::after{
+    width: 400px;
+    bottom: 0;
+    right: -35px;
+    height: 500px;
+    top: -540px;
+    }
+    #about .wrap .mynoun{
+    display: none;
+    }
+/*   bio   */
+    #bio .wrap .list .part ul li{
+        
+    grid-template-columns: 8fr 2fr;
+    }
+    #bio .wrap .list .part ul li span{
+    line-height: 1.5;
+    font-size: 15px;
+    }
+    #bio .wrap .list .part .career li span:nth-child(2){
+    width: 65px;
+    }
+    #bio .wrap .list .part .plustxt{
+    font-size: 13px;
+    line-height: 1.4;
+    display: block !important;
+    }
+/* contact   */
+    #contact2 .wrap .email a img{
+    width: 90%;
+    }
+    #contact2 .wrap .link{
+    flex-direction: column;
+    height: 16%;
+    margin: 0 auto;
+    bottom: 30px;
+    }
+    #contact2 .wrap .link ul.sns{
+    flex-direction: column;
+    }
+    #contact2 .wrap .link ul li a{
+    display: inline-block;
+    margin-top: 10px;
     }
 /*   aside   */
     aside a{
@@ -143,4 +266,14 @@
     right: 25px;
     width: 80px;
     height: 80px;
+    }
+/*   footer   */
+    footer{
+    padding: 20px 0;
+    }
+    footer h1{
+    font-size: 15px;
+    }
+    footer p{
+    font-size: 12px;
     }
