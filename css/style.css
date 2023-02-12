@@ -30,7 +30,11 @@ body{
     font-size: 24px;
     }
     header div.wrap nav {
-      
+    width: 40px;
+    height: 35px;
+    }
+    header div.wrap nav a{
+    display: none;
     }
     header div.wrap nav ul.menu {
     display: flex;
@@ -157,7 +161,7 @@ main{
   display: block;
   }
   #project div.wrap .allproject .project span{
-  /*! display: none; */
+  display: none;
   font-size: 0;
   }
   /*  project list  */
