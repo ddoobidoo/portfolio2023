@@ -18,6 +18,16 @@
   <!-- jq -->
   <script type="text/javascript">
     $(document).ready(function(){
+      //mobile menu transition
+      $("header .wrap nav ul.gnb").hide();
+      $(".momenu").click(function(){
+        $(this).children("span:nth-child(1)").toggleClass("rotate");
+        $(this).children("span:nth-child(2)").toggleClass("disappear");
+        $(this).children("span:nth-child(3)").toggleClass("rotate2");
+        $("header .wrap nav ul.gnb").slideToggle(500);
+        return false;
+      });
+      
       //backgroundcolor
       $("body,html").css({'background-color':'#e1b666'});
 
@@ -51,10 +61,23 @@
         <a href="index.html" class="logo">yeah_soul</a>
       </h1>
       <nav>
+        <a class="momenu">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </a>
         <ul class="menu">
           <li><a href="about.html">about</a></li>
           <li><a href="index.html">project</a></li>
           <li><a href="contact.html">contact</a></li>
+        </ul>
+        <ul class="gnb">
+          <li><a href="about.html">about</a></li>
+          <li><a href="index.html">project</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <h1>
+            <a href="index.html" class="logo">yeah_soul</a>
+          </h1>
         </ul>
       </nav>
     </div>
@@ -143,10 +166,6 @@
         <li>
           <p>date</p>
           <p>2021.04</p>
-        </li>
-        <li>
-          <p>link</p>
-          <a href="">go!</a>
         </li>
       </ul>    
       <div class="next">

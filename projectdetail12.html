@@ -18,6 +18,16 @@
   <!-- jq -->
   <script type="text/javascript">
     $(document).ready(function(){
+      //mobile menu transition
+      $("header .wrap nav ul.gnb").hide();
+      $(".momenu").click(function(){
+        $(this).children("span:nth-child(1)").toggleClass("rotate");
+        $(this).children("span:nth-child(2)").toggleClass("disappear");
+        $(this).children("span:nth-child(3)").toggleClass("rotate2");
+        $("header .wrap nav ul.gnb").slideToggle(500);
+        return false;
+      });
+      
       //backgroundcolor interior ver.
       $("body,html").css({'background-color':'#9dca5e'});
       
@@ -60,10 +70,23 @@
         <a href="index.html" class="logo">yeah_soul</a>
       </h1>
       <nav>
+        <a class="momenu">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </a>
         <ul class="menu">
           <li><a href="about.html">about</a></li>
           <li><a href="index.html">project</a></li>
           <li><a href="contact.html">contact</a></li>
+        </ul>
+        <ul class="gnb">
+          <li><a href="about.html">about</a></li>
+          <li><a href="index.html">project</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <h1>
+            <a href="index.html" class="logo">yeah_soul</a>
+          </h1>
         </ul>
       </nav>
     </div>
@@ -149,16 +172,12 @@
           <p>date</p>
           <p>2016.12</p>
         </li>
-        <li>
-          <p>link</p>
-          <a class="none" href="#;">-</a>
-        </li>
       </ul>    
       <div class="next">
         <div class="back"></div>
         <div class="click">
-          <a href="projectdetail13.html">NEXT</a>
-          <P>2015<span class="block"></span>대구공공디자인공모전</P>
+          <a href="projectdetail14.html">NEXT</a>
+          <P>LUNABREW<span class="block"></span>etude ver.</P>
         </div>
       </div>
     </div>

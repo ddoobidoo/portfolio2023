@@ -91,7 +91,7 @@
     }
     header div.wrap nav .gnb h1 .logo{
     position: absolute;
-    bottom: 50px;
+    bottom: 120px;
     left: 30px;
     text-decoration: none;
     font-size: 20px;
@@ -109,6 +109,10 @@
     div#title div.wrap div.figure img{
     margin-top: 25px;
     }
+    div#title div.wrap ul.detail li a{
+    font-size: 14px;
+    line-height: 2.5;
+    }
     /*  project  */
     #project div.wrap ul.category{
     display: block;
@@ -118,7 +122,7 @@
     }    
     #project div.wrap ul.category li{
     display: inline-block;
-    padding: 6px 21px;
+    padding: 6px 17px;
     border: 2px solid;
     border-radius: 25px;
     margin: 0 auto;
@@ -129,7 +133,7 @@
     background-color: black;
     }
     #project div.wrap ul.category li a{
-    font-size: 26px;
+    font-size: 22px;
     margin: 0;
     text-align: center;
     border: 0;
@@ -149,7 +153,7 @@
     border-top: 1px solid;
     }
     #project div.wrap .allproject .projectlist:nth-child(1){
-    border-top: 2px solid;    
+    border-top: 1px solid;    
     }
     #project div.wrap .allproject .projectlist .project{
     width: 100% !important;
@@ -160,6 +164,7 @@
     #project div.wrap .allproject .project .info h3{
     width: 85%;
     display: block;
+    font-size: 14px;
     }
     #project div.wrap .allproject .project .info p{
     display: none !important;
@@ -171,6 +176,7 @@
     right: calc(50% - 4px);
     transform: scale(1.2) !important;
     }
+    
     /*   projectdetail   */
     div#title div.wrap .subject h3{
     font-size: 50px;
@@ -179,8 +185,8 @@
     display: none;
     }
     div#title div.wrap .subject h3 .dot{
-    top: -3rem !important;
-    left: 0 !important;
+    top: -4rem !important;
+    left: 16rem !important;
     }
     div#title div.wrap .explain .dot{
     left: 5rem !important;
@@ -196,29 +202,42 @@
     height: 80px !important;
     }
     div#title div.wrap ul.detail li{
-    grid-template-columns: 3fr 5fr;
+    grid-template-columns: 2fr 5fr;
     }
     div#title div.wrap .next .click p{
-    font-size: 60px;
+    font-size: 39px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    display: flex;
+    }
+    div#title div.wrap .next .click a{
+    font-size: 20px;
+    padding: 5px 20px;
+    margin-top: 44px;
     }
     div#title div.wrap .explain p{
     font-size: 28px;
     }
     div#title div.wrap ul.detail li p{ 
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.4;
+    }
+    #project div.wrap .allproject{
+    border-top: 1px solid
     }
 /*   about   */
     #about .wrap .txt p{
     width: 100%;
     display: block;
-    margin: 100px 0 0 0;
+    margin: 165px 0 0 0;
     font-size: 18px;
     }
     #about .wrap .img p{
     width: 100%;
     display: block;
-    margin: 700px 0 0 0;  
+    margin: 680px 0 0 0;  
     font-size: 15px;
     padding: 0;
     min-width: 100%;
@@ -228,14 +247,13 @@
     bottom: 0;
     right: -35px;
     height: 500px;
-    top: -540px;
+    top: -565px;
     }
     #about .wrap .mynoun{
     display: none;
     }
 /*   bio   */
     #bio .wrap .list .part ul li{
-        
     grid-template-columns: 8fr 2fr;
     }
     #bio .wrap .list .part ul li span{
@@ -248,7 +266,7 @@
     #bio .wrap .list .part .plustxt{
     font-size: 13px;
     line-height: 1.4;
-    display: block !important;
+    /*! display: block !important; */
     }
 /* contact   */
     #contact2 .wrap .email a img{
@@ -259,20 +277,46 @@
     height: 16%;
     margin: 0 auto;
     bottom: 30px;
+    width: 100%;
     }
     #contact2 .wrap .link ul.sns{
     flex-direction: column;
+    text-align: center;
+    }
+    #contact2 .wrap .link ul.sns li{
+    display: block;
+    width: 100%;
+    }
+    #contact2 .wrap .link ul.sns li:first-child{
+    margin-right: 0;
     }
     #contact2 .wrap .link ul li a{
+    margin-top: 20px;
+    border: 0;
+    display: block;
+    text-align: center;
+    }
+    #contact2 .wrap .link ul li a:hover{
+    background-color: transparent;
+    border: 0;
+    color: #0000007d;
+    }
+    #contact2 .wrap .link ul:nth-child(1) li a::after{
+    content: "";
     display: inline-block;
-    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/download.svg);
+    background-position: center;
+    background-size: contain;
+    margin-left: 10px;
     }
 /*   aside   */
     aside a{
-    bottom: 25px;
-    right: 25px;
-    width: 80px;
-    height: 80px;
+    bottom: 22px;
+    right: 22px;
+    width: 70px;
+    height: 70px;
     }
 /*   footer   */
     footer{

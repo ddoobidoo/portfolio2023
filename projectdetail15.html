@@ -18,6 +18,16 @@
   <!-- jq -->
   <script type="text/javascript">
     $(document).ready(function(){
+      //mobile menu transition
+      $("header .wrap nav ul.gnb").hide();
+      $(".momenu").click(function(){
+        $(this).children("span:nth-child(1)").toggleClass("rotate");
+        $(this).children("span:nth-child(2)").toggleClass("disappear");
+        $(this).children("span:nth-child(3)").toggleClass("rotate2");
+        $("header .wrap nav ul.gnb").slideToggle(500);
+        return false;
+      });
+      
       //backgroundcolor web ver.
       $("body,html").css({'background-color':'#d4cbec'});
 
@@ -58,10 +68,23 @@
         <a href="index.html" class="logo">yeah_soul</a>
       </h1>
       <nav>
+        <a class="momenu">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </a>
         <ul class="menu">
           <li><a href="about.html">about</a></li>
           <li><a href="index.html">project</a></li>
           <li><a href="contact.html">contact</a></li>
+        </ul>
+        <ul class="gnb">
+          <li><a href="about.html">about</a></li>
+          <li><a href="index.html">project</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <h1>
+            <a href="index.html" class="logo">yeah_soul</a>
+          </h1>
         </ul>
       </nav>
     </div>
@@ -87,7 +110,7 @@
           </div>
         </h3>
         <img src="img/photo.jpg" alt="">
-        <p>WEB<span class="block"></span>DESIGN</p>
+        <p>PHOTO<span class="block"></span>GRAPHY</p>
       </div>
       <div class="explain">
         <p>개인 사진작업</p>
@@ -157,15 +180,11 @@
         </li>
         <li>
           <p>Contribution</p>
-          <p>nikon ae-1 활용 사진작업</p>
+          <p>canon ae-1 nikon onetouch 활용 사진작업</p>
         </li>
         <li>
           <p>date</p>
           <p>2017 - 2022</p>
-        </li>
-        <li>
-          <p>link</p>
-          <a class="none" href="#;">-</a>
         </li>
       </ul>    
       <div class="next">

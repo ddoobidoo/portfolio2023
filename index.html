@@ -21,7 +21,17 @@
         function(){
         //aos
           AOS.init();
-        
+      
+        //mobile menu transition
+        $("header .wrap nav ul.gnb").hide();
+        $(".momenu").click(function(){
+          $(this).children("span:nth-child(1)").toggleClass("rotate");
+          $(this).children("span:nth-child(2)").toggleClass("disappear");
+          $(this).children("span:nth-child(3)").toggleClass("rotate2");
+          $("header .wrap nav ul.gnb").slideToggle(500);
+          return false;
+        });
+
         //page in transition
         $("html","body").fadeIn(1000);
 
@@ -30,16 +40,6 @@
 
         $("header div.wrap nav ul.menu li:nth-child(2) a").click(function(){
           $("html,body").animate({scrollTop:projectp},2000);
-          return false;
-        });
-
-        //mobile menu transition
-        $("header .wrap nav ul.gnb").hide();
-        $(".momenu").click(function(){
-          $(this).children("span:nth-child(1)").toggleClass("rotate");
-          $(this).children("span:nth-child(2)").toggleClass("disappear");
-          $(this).children("span:nth-child(3)").toggleClass("rotate2");
-          $("header .wrap nav ul.gnb").slideToggle(500);
           return false;
         });
 
@@ -453,7 +453,7 @@
               </div>
             </div>
           </div>
-          <div class="projectlist" onclick="location.href='projectdetail13.html'">
+          <!-- <div class="projectlist" onclick="location.href='projectdetail13.html'">
             <div class="project">
               <span>public</span>
               <div class="figure">
@@ -476,7 +476,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- <div class="projectlist" onclick="location.href='projectdetail14.html'">
             <div class="project">
               <span>public</span>

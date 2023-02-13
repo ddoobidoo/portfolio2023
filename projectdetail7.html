@@ -18,6 +18,16 @@
   <!-- jq -->
   <script type="text/javascript">
     $(document).ready(function(){
+      //mobile menu transition
+      $("header .wrap nav ul.gnb").hide();
+      $(".momenu").click(function(){
+        $(this).children("span:nth-child(1)").toggleClass("rotate");
+        $(this).children("span:nth-child(2)").toggleClass("disappear");
+        $(this).children("span:nth-child(3)").toggleClass("rotate2");
+        $("header .wrap nav ul.gnb").slideToggle(500);
+        return false;
+      });
+      
       //backgroundcolor 
       $("body,html").css({'background-color':'#65acc1'});
       //svg color 
@@ -53,10 +63,23 @@
         <a href="index.html" class="logo">yeah_soul</a>
       </h1>
       <nav>
+        <a class="momenu">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </a>
         <ul class="menu">
           <li><a href="about.html">about</a></li>
           <li><a href="index.html">project</a></li>
           <li><a href="contact.html">contact</a></li>
+        </ul>
+        <ul class="gnb">
+          <li><a href="about.html">about</a></li>
+          <li><a href="index.html">project</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <h1>
+            <a href="index.html" class="logo">yeah_soul</a>
+          </h1>
         </ul>
       </nav>
     </div>
@@ -101,7 +124,8 @@
       </div>
       <div class="img">
         <p></p>
-        <img src="img/project7/web.png" alt="">
+        <img src="img/project7/web.jpg" alt="">
+        <img src="img/project7/mobile.jpg" alt="">
         <img class="mobile" src="img/project7/mobile.png" alt="">
         <div class="dot">
           <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
