@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style2.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/moblie.css">
   <link rel="shortcut icon" href="img/favicon2.png" type="image/x-icon">
@@ -35,71 +35,6 @@
         //page in transition
         $("html","body").fadeIn(1000);
 
-        //menu scroll : project
-        var projectp=$("#project").offset().top-200;
-
-        $("header div.wrap nav ul.menu li:nth-child(2) a").click(function(){
-          $("html,body").animate({scrollTop:projectp},2000);
-          return false;
-        });
-
-        //project info dot hover animaton
-        $("#project div.wrap .allproject .project .info p").hide();
-        $("#project div.wrap .project").hover(function(){
-          //info p animation
-          $(this).children().children("p").fadeIn();
-          $(this).children().children().children("svg").css({"transform":"scale(2)"});
-          //dot category color change
-          $(".project:contains('interior')").children().children().children("svg").css({"fill":"#e89e11"});
-          $(".project:contains('web')").children().children().children("svg").css({"fill":"#65acc1"});
-          $(".project:contains('etc')").children().children().children("svg").css({"fill":"#d4cbec"});
-          $(".project:contains('public')").children().children().children("svg").css({"fill":"#a3d25d"});
-          //mouse leave
-          $(".project").mouseleave(function(){
-            $(this).children().children().children("svg").css({"transform":"scale(0)"});
-            $(this).children().children("p").fadeOut();
-          });
-        });
-
-        //cagtegory sorting 
-        $("#project div.wrap ul.category li:nth-child(1) a").click(function(){
-          $(".hide").removeClass("hide");
-          $("#project div.wrap .allproject").children("div").addClass("projectlist");
-          return false;
-        });
-
-        $("#project div.wrap ul.category li:nth-child(2) a").click(function(){
-          $(".hide").removeClass("hide");
-          $("#project div.wrap .allproject").children("div").addClass("projectlist");
-          $(".projectlist:contains('interior'),.projectlist:contains('public'),.projectlist:contains('etc')").addClass("hide");
-          $(".projectlist:contains('interior'),.projectlist:contains('public'),.projectlist:contains('etc')").removeClass("projectlist");
-          return false;
-        });
-
-        $("#project div.wrap ul.category li:nth-child(3) a").click(function(){
-          $(".hide").removeClass("hide");
-          $("#project div.wrap .allproject").children("div").addClass("projectlist");
-          $(".projectlist:contains('web'),.projectlist:contains('public'),.projectlist:contains('etc')").addClass("hide");
-          $(".projectlist:contains('web'),.projectlist:contains('public'),.projectlist:contains('etc')").removeClass("projectlist");
-          return false;
-        });
-
-        $("#project div.wrap ul.category li:nth-child(4) a").click(function(){
-          $(".hide").removeClass("hide");
-          $("#project div.wrap .allproject").children("div").addClass("projectlist");
-          $(".projectlist:contains('web'),.projectlist:contains('interior'),.projectlist:contains('etc')").addClass("hide");
-          $(".projectlist:contains('web'),.projectlist:contains('interior'),.projectlist:contains('etc')").removeClass("projectlist");
-          return false;
-        }); 
-
-        $("#project div.wrap ul.category li:nth-child(5) a").click(function(){
-          $(".hide").removeClass("hide");
-          $("#project div.wrap .allproject").children("div").addClass("projectlist");
-          $(".projectlist:contains('web'),.projectlist:contains('interior'),.projectlist:contains('public')").addClass("hide");
-          $(".projectlist:contains('web'),.projectlist:contains('interior'),.projectlist:contains('public')").removeClass("projectlist");
-          return false;
-        });     
-        
       }
     );
   </script>
@@ -145,6 +80,7 @@
           <li><a href="">etc</a></li>
         </ul>
         <div class="allproject">
+          <a href="" class="close"></a>
           <div class="projectlist" onclick="location.href='projectdetail1.html'">
             <div class="project">
               <span>interior</span>
@@ -553,7 +489,7 @@
               </div>
             </div>
           </div>
-          <a href="https://equinox-supernova-fe8.notion.site/Project-list-7fc5cc5e14e24e95875d1ec37476b042" class="more" onClick="window.open('https://equinox-supernova-fe8.notion.site/Project-list-7fc5cc5e14e24e95875d1ec37476b042','resume');return false">more</a>
+          <a href="" class="more">more</a>
         </div>
       </div>
     </section>  
