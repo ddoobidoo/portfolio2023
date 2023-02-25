@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/moblie.css">
+  <link rel="shortcut icon" href="img/favicon2.png" type="image/x-icon">
+  <!-- <script src="js/jquery-3.6.1.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- JQ -->
+  <script type="text/javascript">
+    $(document).ready(
+        function(){
+        //aos
+          AOS.init();
+      
+        //mobile menu transition
+        $("header .wrap nav ul.gnb").hide();
+        $(".momenu").click(function(){
+          $(this).children("span:nth-child(1)").toggleClass("rotate");
+          $(this).children("span:nth-child(2)").toggleClass("disappear");
+          $(this).children("span:nth-child(3)").toggleClass("rotate2");
+          $("header .wrap nav ul.gnb").slideToggle(500);
+          return false;
+        });
+
+        //page in transition
+        $("html","body").fadeIn(1000);
+
+        //menu scroll : project
+        var projectp=$("#project").offset().top-200;
+
+        $("header div.wrap nav ul.menu li:nth-child(2) a").click(function(){
+          $("html,body").animate({scrollTop:projectp},2000);
+          return false;
+        });
+
+        //project info dot hover animaton
+        $("#project div.wrap .allproject .project .info p").hide();
+        $("#project div.wrap .project").hover(function(){
+          //info p animation
+          $(this).children().children("p").fadeIn();
+          $(this).children().children().children("svg").css({"transform":"scale(2)"});
+          //dot category color change
+          $(".project:contains('interior')").children().children().children("svg").css({"fill":"#e89e11"});
+          $(".project:contains('web')").children().children().children("svg").css({"fill":"#65acc1"});
+          $(".project:contains('etc')").children().children().children("svg").css({"fill":"#d4cbec"});
+          $(".project:contains('public')").children().children().children("svg").css({"fill":"#a3d25d"});
+          //mouse leave
+          $(".project").mouseleave(function(){
+            $(this).children().children().children("svg").css({"transform":"scale(0)"});
+            $(this).children().children("p").fadeOut();
+          });
+        });
+
+        //cagtegory sorting 
+        $("#project div.wrap ul.category li:nth-child(1) a").click(function(){
+          $(".hide").removeClass("hide");
+          $("#project div.wrap .allproject").children("div").addClass("projectlist");
+          return false;
+        });
+
+        $("#project div.wrap ul.category li:nth-child(2) a").click(function(){
+          $(".hide").removeClass("hide");
+          $("#project div.wrap .allproject").children("div").addClass("projectlist");
+          $(".projectlist:contains('interior'),.projectlist:contains('public'),.projectlist:contains('etc')").addClass("hide");
+          $(".projectlist:contains('interior'),.projectlist:contains('public'),.projectlist:contains('etc')").removeClass("projectlist");
+          return false;
+        });
+
+        $("#project div.wrap ul.category li:nth-child(3) a").click(function(){
+          $(".hide").removeClass("hide");
+          $("#project div.wrap .allproject").children("div").addClass("projectlist");
+          $(".projectlist:contains('web'),.projectlist:contains('public'),.projectlist:contains('etc')").addClass("hide");
+          $(".projectlist:contains('web'),.projectlist:contains('public'),.projectlist:contains('etc')").removeClass("projectlist");
+          return false;
+        });
+
+        $("#project div.wrap ul.category li:nth-child(4) a").click(function(){
+          $(".hide").removeClass("hide");
+          $("#project div.wrap .allproject").children("div").addClass("projectlist");
+          $(".projectlist:contains('web'),.projectlist:contains('interior'),.projectlist:contains('etc')").addClass("hide");
+          $(".projectlist:contains('web'),.projectlist:contains('interior'),.projectlist:contains('etc')").removeClass("projectlist");
+          return false;
+        }); 
+
+        $("#project div.wrap ul.category li:nth-child(5) a").click(function(){
+          $(".hide").removeClass("hide");
+          $("#project div.wrap .allproject").children("div").addClass("projectlist");
+          $(".projectlist:contains('web'),.projectlist:contains('interior'),.projectlist:contains('public')").addClass("hide");
+          $(".projectlist:contains('web'),.projectlist:contains('interior'),.projectlist:contains('public')").removeClass("projectlist");
+          return false;
+        });     
+        
+      }
+    );
+  </script>
+  <title>yeah_soul</title>
+</head>
+<body>
+<!-- header -->
+<header>
+<div class="wrap">
+    <h1 class="logo">
+    <a href="index.html" class="logo">yeah_soul</a>
+    </h1>
+    <nav>
+    <a class="momenu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </a>
+    <ul class="menu">
+        <li><a href="about.html">about</a></li>
+        <li><a href="project.html">project</a></li>
+        <li><a href="contact.html">contact</a></li>
+    </ul>
+    <ul class="gnb">
+        <li><a href="about.html">about</a></li>
+        <li><a href="project.html">project</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <h1>
+        <a href="index.html" class="logo">yeah_soul</a>
+        </h1>
+    </ul>
+    </nav>
+</div>
+</header>
+    <!-- section/project -->
+    <section id="project">
+      <div class="wrap">
+        <ul class="category">
+          <li><a href="">all</a></li>
+          <li><a href="">web</a></li>
+          <li><a href="">interior</a></li>
+          <li><a href="">public</a></li>
+          <li><a href="">etc</a></li>
+        </ul>
+        <div class="allproject">
+          <div class="projectlist" onclick="location.href='projectdetail1.html'">
+            <div class="project">
+              <span>interior</span>
+              <div class="figure">
+                <img src="img/interior1.jpg" alt="">
+              </div>
+              <div class="info">
+                <h3>BIZ CAMPUS 오프라인 플랫폼 공간디자인 제안</h3>
+                <p>H여대 산학협력단 로비 시설물 및 가구 디자인 제안</p>
+                <div class="dot">
+                  <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                      <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                        c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                        c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                        c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                        C189.12,238.66,192.92,238.13,181.9,240.69"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="projectlist" onclick="location.href='projectdetail2.html'">
+            <div class="project">
+              <span>web</span>
+              <div class="figure">
+                <img src="img/web1.gif" alt="">
+              </div>
+              <div class="info">
+                <h3>HYUNDAI ARCHITECT etude.ver</h3>
+                <p>현대건설 웹페이지 습작</p>
+                <div class="dot">
+                  <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                      <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                        c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                        c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                        c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                        C189.12,238.66,192.92,238.13,181.9,240.69"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="projectlist" onclick="location.href='projectdetail3.html'">
+            <div class="project">
+              <span>interior</span>
+              <div class="figure">
+                <img src="img/interior4.jpg" alt="">
+              </div>
+              <div class="info">
+                <h3>D쥬얼리샵</h3>
+                <p>제주소재 쥬얼리샵 인테리어프로젝트</p>
+                <div class="dot">
+                  <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                      <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                        c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                        c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                        c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                        C189.12,238.66,192.92,238.13,181.9,240.69"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="projectlist" onclick="location.href='projectdetail4.html'">
+            <div class="project">
+              <span>public</span>
+              <div class="figure">
+                <img src="img/public1.jpeg" alt="">
+              </div>
+              <div class="info">
+                <h3>2021 중구 생활안심디자인조성 사업</h3>
+                <p>중구 남산초등학교 일대 등교길 개선 셉티드디자인</p>
+                <div class="dot">
+                  <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                      <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                        c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                        c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                        c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                        C189.12,238.66,192.92,238.13,181.9,240.69"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>            
+          </div>
+          <div class="projectlist" onclick="location.href='projectdetail5.html'">
+            <div class="project">
+              <span>web</span>
+              <div class="figure">
+                <img src="img/web3.gif" alt="">
+              </div>
+              <div class="info">
+                <h3>dreams bloom endlessly</h3>
+                <p>2022 design portfolio</p>
+                <div class="dot">
+                  <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                      <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                        c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                        c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                        c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                        C189.12,238.66,192.92,238.13,181.9,240.69"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div> 
+          </div>
+          <div class="projectlist" onclick="location.href='projectdetail6.html'">
+            <div class="project">
+              <span>interior</span>
+              <div class="figure">
+                <img src="img/interior2.jpg" alt="">
+              </div>
+              <div class="info">
+                <h3>B사 프랜차이즈</h3>
+                <p>요식업 프랜차이즈 인테리어 및 사인 디자인</p>
+                <div class="dot">
+                  <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                      <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                        c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                        c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                        c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                        C189.12,238.66,192.92,238.13,181.9,240.69"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="projectlist" onclick="location.href='projectdetail7.html'">
+            <div class="project">
+              <span>web</span>
+              <div class="figure">
+                <img src="img/web2.gif" alt="">
+              </div>
+              <div class="info">
+                <h3>LUNABREW redesign.ver</h3>
+                <p>루나브루 맥주브루잉회사 웹페이지 리디자인(습작)</p>
+                <div class="dot">
+                  <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                      <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                        c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                        c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                        c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                        C189.12,238.66,192.92,238.13,181.9,240.69"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div> 
+          </div>
+          <div class="projectlist" onclick="location.href='projectdetail8.html'">
+            <div class="project">
+              <span>interior</span>
+              <div class="figure">
+                <img src="img/interior3.jpg" alt="">
+              </div>
+              <div class="info">
+                <h3>KATRI SizeKorea exhibition center</h3>
+                <p>KATRI 사이즈코리아 전시관 인테리어 프로젝트</p>
+                <div class="dot">
+                  <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                      <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                        c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                        c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                        c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                        C189.12,238.66,192.92,238.13,181.9,240.69"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div> 
+          </div>
+          <div class="projectlist" onclick="location.href='projectdetail9.html'">
+            <div class="project">
+              <span>public</span>
+              <div class="figure">
+                <img src="img/public2.jpeg" alt="">
+              </div>
+              <div class="info">
+                <h3>광희동 중앙아시아거리 생활안심디자인조성사업</h3>
+                <p>중구 중앙아시아거리일대 셉티드디자인 프로젝트</p>
+                <div class="dot">
+                  <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                      <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                        c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                        c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                        c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                        C189.12,238.66,192.92,238.13,181.9,240.69"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="projectlist" onclick="location.href='projectdetail10.html'">
+            <div class="project">
+              <span>public</span>
+              <div class="figure">
+                <img src="img/public3.jpg" alt="">
+              </div>
+              <div class="info">
+                <h3>서초구 야외무더위쉼터조성 사업</h3>
+                <p>여의천 일대 야외무더위쉼터조성 디자인 프로젝트</p>
+                <div class="dot">
+                  <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                      <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                        c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                        c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                        c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                        C189.12,238.66,192.92,238.13,181.9,240.69"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="projectlist" onclick="location.href='projectdetail11.html'">
+            <div class="project">
+              <span>interior</span>
+              <div class="figure">
+                <img src="img/interior5.jpg" alt="">
+              </div>
+              <div class="info">
+                <h3>D투석전문내과</h3>
+                <p>제주소재 투석전문내과 인테리어프로젝트</p>
+                <div class="dot">
+                  <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                      <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                        c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                        c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                        c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                        C189.12,238.66,192.92,238.13,181.9,240.69"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="projectlist" onclick="location.href='projectdetail12.html'">
+            <div class="project">
+              <span>public</span>
+              <div class="figure">
+                <img src="img/public4.jpg" alt="">
+              </div>
+              <div class="info">
+                <h3>foodstadium for seo-mun</h3>
+                <p>실내환경디자인학과 졸업작품 대구 서문시장 중심으로 안전하고 새로운 먹거리 공간제안</p>
+                <div class="dot">
+                  <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                      <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                        c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                        c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                        c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                        C189.12,238.66,192.92,238.13,181.9,240.69"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="projectlist" onclick="location.href='projectdetail13.html'">
+            <div class="project">
+              <span>public</span>
+              <div class="figure">
+                <img src="img/public5.gif" alt="">
+              </div>
+              <div class="info">
+                <h3>2015 대구공공디자인공모전 동상작품</h3>
+                <p>2015 대구공공디자인공모전 3인조팀 동상작품</p>
+                <div class="dot">
+                  <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                      <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                        c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                        c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                        c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                        C189.12,238.66,192.92,238.13,181.9,240.69"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- <div class="projectlist" onclick="location.href='projectdetail14.html'">
+            <div class="project">
+              <span>public</span>
+              <div class="figure">
+                <img src="" alt="">
+              </div>
+              <div class="info">
+                <h3>합천영상테마파크 사이니지 개발</h3>
+                <p>합천영상테마파크 사이니지 개발 디자인 참여</p>
+                <div class="dot">
+                  <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                      <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                        c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                        c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                        c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                        C189.12,238.66,192.92,238.13,181.9,240.69"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- <div class="projectlist" onclick="location.href='projectdetail15.html'">
+            <div class="project">
+              <span>public</span>
+              <div class="figure">
+                <img src="img/public6.png" alt="">
+              </div>
+              <div class="info">
+                <h3>전남도립미술관 MI 제안</h3>
+                <p>전남도립미술관 MI 개발 프로젝트 참여</p>
+                <div class="dot">
+                  <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                      <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                        c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                        c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                        c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                        C189.12,238.66,192.92,238.13,181.9,240.69"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div class="projectlist" onclick="location.href='projectdetail14.html'">
+            <div class="project">
+              <span>web</span>
+              <div class="figure">
+                <img src="img/web4.gif" alt="">
+              </div>
+              <div class="info">
+                <h3>LUNABREW etude ver.</h3>
+                <p>루나브루 맥주브루잉회사 웹페이지 습작</p>
+                <div class="dot">
+                  <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                      <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                        c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                        c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                        c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                        C189.12,238.66,192.92,238.13,181.9,240.69"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="projectlist" onclick="location.href='projectdetail15.html'">
+            <div class="project">
+              <span>etc</span>
+              <div class="figure">
+                <img src="img/photo.jpg" alt="">
+              </div>
+              <div class="info">
+                <h3>photography</h3>
+                <p>film photography personal work</p>
+                <div class="dot">
+                  <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                    <g>
+                      <path d="M181.9,240.69c-39.24,8.58-80.76,6.47-118.93-6.05c-16.14-5.29-32.3-12.88-42.83-26.21c-9.1-11.52-13.13-26.3-14.69-40.9
+                        c-2.34-21.9,0.38-44.02,4.15-65.72c2.68-15.42,5.94-30.88,12.23-45.22S37.7,29.01,50.88,20.56c11.02-7.06,23.98-10.44,36.85-12.9
+                        c17.17-3.27,34.91-5.07,52.08-1.83c16.74,3.17,32.19,10.97,47.23,18.95c10.93,5.8,22.01,11.91,30.28,21.11
+                        c16.19,18.02,18.64,44.03,22.51,67.94c3.63,22.41,9.15,45.71,2.37,67.37c-7.72,24.67-17.35,42.37-41.17,52.42
+                        C189.12,238.66,192.92,238.13,181.9,240.69"/>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="" class="more">more</a>
+        </div>
+      </div>
+    </section>  
+    <!-- section/contact -->
+    <!-- <section id="contact">
+      <div class="wrap">
+        <div class="container">
+          <a href="contact.html">CONTACT<span class="block"></span>ME</a>
+        </div>
+      </div>
+    </section> -->
+  </main>
+  <!-- contact-aside -->
+  <aside>
+    <a href="contact.html"></a>
+  </aside>  
+  <!-- footer -->
+  <footer>
+    <h1>dreams blooms endlessly</h1>
+    <p>copyright. 2022. yeah_soul. all rights are deserved.</p>    
+  </footer>
+</body>
+</html>
