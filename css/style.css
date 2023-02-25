@@ -5,6 +5,7 @@ body{
 
   /* -webkit-animation: scaleUpCenter .4s ease-out both;
   animation: scaleUpCenter .4s ease-out both; */
+  /*! color: #799374; */
   }
   /* @-webkit-keyframes scaleUp {
   from { opacity: 0; -webkit-transform: scale(.8); }
@@ -28,6 +29,7 @@ body{
     display: block;
     text-decoration: none;
     font-size: 24px;
+    /*! color: #799374; */
     }
     header div.wrap nav {
     /*! width: 40px; */
@@ -49,6 +51,7 @@ body{
     font-size: 24px;
     transition: 0.5s;
     padding: 10px;
+    /*! color: #799374; */
     }
     header div.wrap nav ul.menu li a:hover{
     opacity: 0.3;
@@ -497,7 +500,6 @@ main{
   }
 /* contact2 */
 #contact2{
-  /*! background-color: #abce64; */
   height: 100%;
   width: 100%;
   background-image: url(../img/contactbg.jpg);
@@ -510,7 +512,7 @@ main{
   min-height: 80%;
   position: relative;
   }
-  #contact2 .wrap .con{
+  /* #contact2 .wrap .con{
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -520,12 +522,11 @@ main{
   #contact2 .wrap .con h2{
   display: block;
   width: 100%;
-  
   font-size: 260px;
   margin: 0 auto;
   text-align: center;
-  }
-  #contact2 .wrap .email{
+  } */
+  /* #contact2 .wrap .email{
 
   }
   #contact2 .wrap .email a{
@@ -539,7 +540,33 @@ main{
   margin-bottom: 50px; 
   transition: 0.5s;
   opacity: 0.8; 
-  } 
+  }  */
+  #contact2 .wrap .txt{
+  height: 5vh;
+  display: flex; 
+  justify-content: center;
+  margin-top: 20rem;
+  }
+  #contact2 .wrap .txt .content{
+  width: 39ch;
+  animation: typing 4s steps(39), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 3em;
+  }
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
   #contact2 .wrap .link{
   display: flex;
   justify-content: space-between;
@@ -548,13 +575,13 @@ main{
   bottom: 0;
   }
   #contact2 .wrap .link ul{
-  
+    display: flex;
   }
-  #contact2 .wrap .link ul.sns{
-  display: flex;
-  }
-  #contact2 .wrap .link ul.sns li:first-child{
+  #contact2 .wrap .link ul li{
   margin-right: 20px;
+  }
+  #contact2 .wrap .link ul :last-child{
+  margin-right: 0px;
   }
   #contact2 .wrap .link ul li a{
   text-decoration: none;
