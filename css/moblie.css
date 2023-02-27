@@ -352,7 +352,7 @@
     #contact2 .wrap .link ul li{
     display: block;
     width: 100%;
-    border-bottom: 2px solid
+    border-bottom: 2px solid;
     scale: 0.9;
     }
     #contact2 .wrap .link ul.sns li:first-child{
