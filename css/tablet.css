@@ -1,9 +1,9 @@
-@media screen and (max-width:1440px){
+@media screen and (min-width:768px) and (max-width:1024px){
   div#title div.wrap div.title p{
-  font-size: 110px;
+  font-size: 110px; 
   }
   #about .wrap .txt p{
-  width: 41rem; 
+  width: 41rem;  
   }
   #about .wrap .img p{
     /*! width: 100%; */
