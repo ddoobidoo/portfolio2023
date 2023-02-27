@@ -290,51 +290,6 @@
     #contact2 .wrap .txt .content{
     font-size: 13px;
     }
-    #contact2 .wrap .txt .mocontent span{
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid transparent;
-    font-family: monospace;
-    font-size: 22px;
-    display: block;
-    }
-    #contact2 .wrap .txt .mocontent span:first-child{
-    animation: typing 2s steps(12), blink2 0.5s forwards step-end 3;   
-    width: 12ch;
-    }
-    @keyframes blink2 {
-        0% {
-
-        }
-        50% {
-            border-color: black          
-        }
-        100% {
-            border-color: transparent 
-        }
-    }
-    #contact2 .wrap .txt .mocontent span:last-child{
-    animation: typing 4s steps(25) backwards, blink3 .5s step-end infinite alternate;   
-    width: 25ch;
-    animation-delay: 2s;
-    }
-    @keyframes typing {
-        from {
-            width: 0
-        }
-    }
-
-    @keyframes blink3 {
-        0% {
-            border-color: transparent
-        }
-        50% {
-            border-color: black
-        }
-        100% {
-            border-color: transparent
-        }
-    }
     #contact2 .wrap .email a img{
     width: 90%;
     }
@@ -342,7 +297,7 @@
     flex-direction: column;
     /*! height: 16%; */
     margin: 0 auto;
-    bottom: 30px;
+    bottom: 0px;
     width: 100%;
     }
     #contact2 .wrap .link ul{
