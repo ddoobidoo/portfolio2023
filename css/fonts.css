@@ -5,8 +5,8 @@
 }
 @font-face {
   font-family: 'PPNeueMontreal-Thin';
-  src: url('../fonts/PPNeueMontreal-Thin.woff') format('woff');
-  font-weight: lighter;
+  src: url('../fonts/PPNeueMontreal-Italic.woff') format('woff');
+  font-weight: italic;
 }
 @font-face {
   font-family: 'PPNeueMontreal-Bold';

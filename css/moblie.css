@@ -68,9 +68,10 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #f05038;
+    /*! background-color: #f05038; */
     z-index: 1;
     height: 812px;
+    background-image: url(../img/contactbg.jpg);
     }
     header div.wrap nav .gnb li{
     padding: 0 45px;
@@ -166,7 +167,8 @@
     width: 100% !important;
     }
     #project div.wrap .allproject .project .figure{
-    display: none; 
+    /*! display: none; */ 
+    margin-top: 20px;
     }
     #project div.wrap .allproject .project .info h3{
     width: 85%;
@@ -241,6 +243,9 @@
     margin: 165px 0 0 0;
     font-size: 18px;
     }
+    #about .wrap .txt p span:first-child{
+
+    }
     #about .wrap .img p{
     width: 100%;
     display: block;
@@ -280,12 +285,10 @@
     width: 100%;
     }
     #contact2 .wrap .txt{
-    margin-top: 12rem;
-    margin-left: 2rem
-    justify-content: flex-start;
+    margin-top: 9rem;
     }
     #contact2 .wrap .txt .content{
-    display: none;
+    font-size: 13px;
     }
     #contact2 .wrap .txt .mocontent span{
     white-space: nowrap;
@@ -409,3 +412,4 @@
     footer p{
     font-size: 12px;
     }
+}

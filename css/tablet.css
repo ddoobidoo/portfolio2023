@@ -1,0 +1,40 @@
+@media screen and (max-width:1440px){
+  div#title div.wrap div.title p{
+  font-size: 110px;
+  }
+  #about .wrap .txt p{
+  width: 70%;
+  }
+  #about .wrap .img p{
+    /*! width: 100%; */
+    min-width: 83%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 50rem;
+  }
+  #about .wrap .img p::after{
+  bottom: 17rem;
+  /*! right: calc(50% - 250px); */
+  width: 100%;
+  right: 0;
+  }
+  #about .wrap .mynoun{
+  width: 100%;
+  }
+  #about .wrap .mynoun ul{
+  scale: 0.9;
+  width: 87%;
+  margin: 0 auto;
+  }
+  #project div.wrap ul.category{
+  gap: 13px;
+  }
+  #project div.wrap ul.category li{
+  scale: 0.9;
+  }
+  #contact2 .wrap .link ul li{
+  scale: 0.9;
+  margin-right: 0px;
+  }
+}

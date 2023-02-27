@@ -284,7 +284,12 @@ main{
   font-weight: normal;
   } 
   #about .wrap .txt p span:first-child{
-  padding-left: 3rem;
+  display: block;
+  padding-bottom: 20px;
+  }
+  #about .wrap .txt p span:last-child{
+  display: block;
+  padding-top: 20px;
   }
   #about .wrap .img{
   /*! height: 600px; */
@@ -318,8 +323,7 @@ main{
   opacity: 0.8;
 }
   #about .wrap .mynoun{
-  width: 55%;
-  margin: 0 auto;
+  width: 100%;
   margin-top: 150px;
   text-align: center;
   }
@@ -327,20 +331,27 @@ main{
   display: block;
   width: 1000px;
   padding: 120px 0;
+  margin: 0 auto;
   }
   #about .wrap .mynoun ul li{  
   display: inline-block;
-  padding: 7px 22px;
-  border: 2px solid;
-  border-radius: 25px;
-  margin: 7px;
-  transition: 0.5s;
+  /*! padding: 7px 22px; */
+  /*! border: 2px solid; */
+  /*! border-radius: 25px; */
+  /*! margin: 7px; */
+  /*! transition: 0.5s; */
   }
   #about .wrap .mynoun ul li a{
   text-decoration: none;
   font-size: 36px;
   text-transform: capitalize;
   transition: 0.5s;
+  padding: 7px 22px;
+  border: 2px solid;
+  border-radius: 25px;
+  margin: 7px;
+  transition: 0.5s;
+  display: inline-block;
   }
   #about .wrap .mynoun ul li:hover{
   background-color: black;
@@ -510,7 +521,7 @@ main{
 #contact2{
   height: 100%;
   width: 100%;
-  background-image: url(../img/contactbg.jpg);
+  /*! background-image: url(../img/contactbg.jpg); */
   background-size: cover;
   position: fixed;
   z-index: 3; 
@@ -550,30 +561,50 @@ main{
   opacity: 0.8; 
   }  */
   #contact2 .wrap .txt{
-  height: 5vh;
+  /*! height: 5vh; */
   display: flex; 
   justify-content: center;
-  margin-top: 20rem;
+  margin-top: 18rem;
+  }
+  #contact2 .wrap .txt .content::before{
+  content: "";
   }
   #contact2 .wrap .txt .content{
-  width: 39ch;
-  animation: typing 4s steps(39), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 3em;
+  text-align: center;
+  line-height: 1.2;
+  font-style: italic;
+  font-family: 'PPNeueMontreal-Medium';
+
   }
-  @keyframes typing {
-    from {
-      width: 0
-    }
+  #contact2 .wrap .txt .content span{
+  display: block;
+  /*! font-size: 22px; */
+  line-height: 1.5;
+  animation: change 20s infinite linear;
   }
-      
-  @keyframes blink {
-    50% {
-      border-color: transparent
+  @keyframes change{
+    0%{
+      color: cadetblue;
     }
+    25%{
+      color: coral;
+    }
+    50%{
+      color: crimson; 
+    }
+    75%{
+      color: cadetblue;
+    }
+    100%{
+      color: cornflowerblue; 
+    }
+  } 
+  #contact2 .wrap .txt .content span:last-child{
+  margin-top: 20px;
+  /*! font-style: normal; */
+  font-weight: bold;
+  font-family: 'AppleSDGothicNeo';
+  font-family: 'PPNeueMontreal-Bold';
   }
   #contact2 .wrap .link{
   display: flex;
@@ -583,7 +614,7 @@ main{
   bottom: 0;
   }
   #contact2 .wrap .link ul{
-    display: flex;
+  display: flex;
   }
   #contact2 .wrap .link ul li{
   margin-right: 20px;
