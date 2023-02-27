@@ -353,6 +353,7 @@
     display: block;
     width: 100%;
     border-bottom: 2px solid
+    scale: 0.9;
     }
     #contact2 .wrap .link ul.sns li:first-child{
     border-top: 2px solid;
